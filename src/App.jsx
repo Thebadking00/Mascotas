@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [data, setData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
@@ -16,27 +16,13 @@ function App() {
       .catch((error) => console.error("Error al obtener datos:", error));
   }, []);
 
-  const handleSearch = (e) => {
-    const term = e.target.value.toLowerCase();
-    setSearchTerm(term);
-
-    const filtered = data.filter((mascota) =>
-      mascota.name.toLowerCase().includes(term)
-    );
-    setFilteredData(filtered);
-  };
+  
 
   return (
     <div className="container d-flex justify-content-center align-items-center vh-100" id="app">
       <div className="text-center">
-        <h1 className="text-center mb-4">Lista de Mascotas</h1>
-        <input
-          type="text"
-          placeholder="Buscar por nombre"
-          value={searchTerm}
-          onChange={handleSearch}
-          className="form-control mb-4"
-        />
+        <h1 className="text-center mb-4">Lista de Mascotas En la rama dev</h1>
+        
         <div className="card shadow p-4">
           {filteredData.length > 0 ? (
             <table className="table table-striped table-hover table-centered">
