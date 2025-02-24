@@ -7,7 +7,7 @@ function App() {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/mascotas")
+    fetch("http://3.129.250.115/mascotas/")
       .then((response) => response.json())
       .then((data) => {
         setData(data);
