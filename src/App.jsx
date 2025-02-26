@@ -15,6 +15,7 @@ function App() {
     <div className="container d-flex flex-column align-items-center vh-100 py-4">
       <h1 className="text-center mb-4">Lista de Mascotas</h1>
 
+
       <FormularioMascota onMascotaAgregada={handleMascotaAgregada} />
 
       <div className="card shadow p-4 w-100">
