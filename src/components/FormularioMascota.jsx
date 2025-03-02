@@ -14,7 +14,7 @@ function FormularioMascota({ onMascotaAgregada }) {
     const nuevaMascota = { name: nombre, type: tipo };
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/mascotas/", {
+      const response = await fetch("https://3.129.250.115/mascotas/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
